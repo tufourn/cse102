@@ -1,5 +1,44 @@
+
 # CSE102
 Stuff that might be helpful for those taking CSE102 at MSU.
+
+## General advice
+* Start working on projects early. They're not algorithmically difficult, but the project specifications are often not very clear, and they make it difficult for you to get things right because of all the string formatting you have to do.
+* Currently, the class assignments are done on Codio, and the code editor there kind of sucks. I recommend that you download a proper Python IDE like PyCharm to make your life easier.
+* Use descriptive names for your variables. The projects can take several hundred lines of code, and you really don't want to confuse yourself. Consider using the `_list` postfix for your list names to make it clear. For example, if you have a list of `customer_name`, name it `customer_name_list`.
+
+## For loops
+Let's say that you have a list of numbers, and you are asked iterate through it and increment each number by 1.
+```python
+example_list = [0, 1, 2, 3]
+```
+If you do something like this, the list isn't modified at all, and you get the wrong result. The reason is a bit [complicated](https://stackoverflow.com/questions/14814771/in-a-python-for-loop-is-the-iteration-variable-a-reference-can-it-be-used-to).
+
+```python
+example_list = [0, 1, 2, 3]
+for num in example_list:
+    num += 1
+print(example_list)
+```
+```python
+# Expected output
+[1, 2, 3, 4]
+# Actual output
+[0, 1, 2, 3]
+```
+The good news is, you don't really have to understand all that. All you need to know for this class is, when you want **to iterate and modify elements in a list, use `for i in range(n)`, then use square brackets `[]` to access and modify the elements**. If you only need to read values from a list without modifying it, then using `for x in lst` is fine.
+```python
+example_list = [0, 1, 2, 3]
+for i in range(len(example_list)):
+    example_list[i] += 1
+print(example_list)
+```
+```python
+# Expected output
+[1, 2, 3, 4]
+# Actual output
+[1, 2, 3, 4]
+```
 
 ## Parallel lists
 ### General Info
