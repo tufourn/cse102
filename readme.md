@@ -3,12 +3,23 @@
 Stuff that might be helpful for those taking CSE102 at MSU.
 
 ## General advice
+* As of Spring 2024, the class assignments are done on Codio, and the code editor there kind of sucks. I highly recommend that you download and use a proper Python IDE like PyCharm.
 * Start working on projects early. They're not algorithmically difficult, but the project specifications are often not very clear, and they make it difficult for you to get things right because of all the string formatting you have to do.
-* Currently, the class assignments are done on Codio, and the code editor there kind of sucks. I recommend that you download a proper Python IDE like PyCharm to make your life easier.
-* Use descriptive names for your variables. The projects can take several hundred lines of code, and you really don't want to confuse yourself. Consider using the `_list` postfix for your list names to make it clear. For example, if you have a list of `customer_name`, name it `customer_name_list`.
+* Read through the entire project specifications to get an idea of how to program it before actually writing any code. Writing pseudocode can be helpful.
+* If you forget how to do something, just do a quick Google search. It's much faster than trying to dig through ZyBooks. Or use ChatGPT, just make sure you don't get caught.
+
+## Coding best practices
+* Add comments and use blank lines to separate your code into sections. This makes your code easier to read and understand.
+* Use descriptive names for your variables. Consider using the `_list` postfix for your list names to make it clear. For example, if you have a list of `customer_name`, name it `customer_name_list`.
+* Run and test your code often to make sure it's behaving as expected. I've seen some students write hundreds of lines of code without running it once, and then wonder why the program doesn't work.
+
+## String formatting
+Most of this class is about formatting and printing stuff out correctly, so it's important that you know how to do it with `f-strings`.
+
+//TODO
 
 ## For loops
-Let's say that you have a list of numbers, and you are asked iterate through it and increment each number by 1.
+Let's say that you have a list of numbers, and you are asked to modify its elements, for example increment each number by 1.
 ```python
 example_list = [0, 1, 2, 3]
 ```
