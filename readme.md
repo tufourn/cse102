@@ -16,7 +16,48 @@ Stuff that might be helpful for those taking CSE102 at MSU.
 ## String formatting
 Most of this class is about formatting and printing stuff out correctly, so it's important that you know how to do it with `f-strings`.
 
-//TODO
+f-strings allows you to embed expressions inside string literals using curly braces `{}`. Here are some examples:
+```python
+# You'll often use f-strings inside print statements, but you can assign it to a variable as well
+name = "Alice"
+fstr = f"Hello {name}"    # Notice the f in front of the quotation mark
+print(fstr)               # This will print out "Hello Alice"
+```
+```python
+x = 1
+y = 2
+print(f"x={x} plus y={y} is z={x+y}") # This will print out "x=1 plus y=2 is z=3"
+```
+
+You can perform string formatting using a colon `:` inside the curly braces `{}` by following this format:
+
+```
+{<expression>:<formatting_option>}
+```
+
+Before the colon is the expression, or the value you want to replace the curly braces with.
+
+After the colon is the formatting option. It allows you to specify things like the number of decimal places for floats and alignment of strings.
+
+To specify the number of decimal places, use `.xf`, where `x` is the number of decimal places you want.
+```python
+pi = 3.141592653589
+print(f"The value of pi is {pi:.2f}")    # This will print out "The value of pi is 3.14"
+```
+
+To specify the width and alignment, use `<direction><width>`, where `<direction>` is one of `<` for left aligned, `^` for center aligned, `>` for right aligned. If `<direction>` is omitted, it defaults to left aligned.
+```python
+name = "Alice"         #                 |123456789|
+print(f"{name:9}")     # This prints out "Alice"
+print(f"{name:>9}")    # This prints out "    Alice"
+print(f"{name:^9}")    # This prints out "  Alice  "
+```
+
+You can even do both at the same time. In this example, `>9` means right aligned in 9 characters, `.2f` means displaying 2 decimal places
+```python
+pi = 3.141592653589   #                 |123456789|
+print(f"{pi:>9.2f}")  # This prints out "     3.14"
+```
 
 ## For loops
 Let's say that you have a list of numbers, and you are asked to modify its elements, for example increment each number by 1.
