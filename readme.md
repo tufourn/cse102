@@ -2,16 +2,16 @@
 # CSE102
 Stuff that might be helpful for those taking CSE102 at MSU.
 
-## General advice
-* As of Spring 2024, the class assignments are done on Codio, and the code editor there kind of sucks. I highly recommend that you download and use a proper Python IDE like PyCharm.
-* Start working on projects early. They're not algorithmically difficult, but the project specifications are often not very clear, and they make it difficult for you to get things right because of all the string formatting you have to do.
-* Read through the entire project specifications to get an idea of how to program it before actually writing any code. Writing pseudocode can be helpful.
-* If you forget how to do something, just do a quick Google search. It's much faster than trying to dig through ZyBooks. Or use ChatGPT, just make sure you don't get caught.
-
-## Coding best practices
+## General advice and best practices
+* As of Spring 2024, the class assignments are done on Codio, and its code editor kind of sucks. I highly recommend that you download and use a proper Python IDE like PyCharm.
+* Start working on projects early, and read through the entire project specifications to get an idea of how to program it before actually writing any code. Writing pseudocode can be helpful.
+* If you forget how to do something, just do a quick Google search. It's much faster than trying to dig through ZyBooks. Or use ChatGPT, just don't get caught.
 * Add comments and use blank lines to separate your code into sections. This makes your code easier to read and understand.
-* Use descriptive names for your variables. Consider using the `_list` postfix for your list names to make it clear. For example, if you have a list of `customer_name`, name it `customer_name_list`.
+* Use descriptive names for your variables. I personally also like to use the `_list` postfix for list names to make it clear. For example, if you have a list of `customer_name`, name it `customer_name_list`.
 * Run and test your code often to make sure it's behaving as expected. I've seen some students write hundreds of lines of code without running it once, and then wonder why the program doesn't work.
+
+## How to use this document
+This is meant to be a summary of key concepts and quick reference guide when you forget how to do something. It is **not a substitute** for reading the textbooks and watching the lecture.
 
 ## String formatting
 Most of this class is about formatting and printing stuff out correctly, so it's important that you know how to do it with `f-strings`.
@@ -32,12 +32,14 @@ print(f"x={x} plus y={y} is z={x+y}") # This will print out "x=1 plus y=2 is z=3
 You can perform string formatting using a colon `:` inside the curly braces `{}` by following this format:
 
 ```
-{<expression>:<formatting_option>}
+#     Before the colon is the expression, or the value you want to replace the curly braces with
+#     |
+{<expression>:<formatting_specifier>}
+#                     |
+#                     After the colon is the format specifier
 ```
 
-Before the colon is the expression, or the value you want to replace the curly braces with.
-
-After the colon is the formatting option. It allows you to specify things like the number of decimal places for floats and alignment of strings.
+[This](https://www.pythonmorsels.com/string-formatting/) is a cheatsheet containing most format specifiers in Python, but the most important ones that you're likely to encounter in class are shown below.
 
 To specify the number of decimal places, use `.xf`, where `x` is the number of decimal places you want.
 ```python
